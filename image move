@@ -1,0 +1,9 @@
+from PIL import Image
+from PIL import ImageEnhance
+import os
+import cv2
+import numpy as np
+def move(root_path,img_name,off): #平移，平移尺度为off
+    img = Image.open(os.path.join(root_path, img_name))
+    offset = img.offset(off,0)
+    return offset
