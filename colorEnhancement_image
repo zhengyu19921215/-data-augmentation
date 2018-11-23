@@ -1,0 +1,6 @@
+def colorEnhancement(root_path,img_name):#颜色增强
+    image = Image.open(os.path.join(root_path, img_name))
+    enh_col = ImageEnhance.Color(image)
+    color = 1.5
+    image_colored = enh_col.enhance(color)
+    return image_colored
