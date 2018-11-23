@@ -1,0 +1,6 @@
+
+def rotation(root_path, img_name):
+    img = Image.open(os.path.join(root_path, img_name))
+    rotation_img = img.rotate(20) #旋转角度
+    # rotation_img.save(os.path.join(root_path,img_name.split('.')[0] + '_rotation.jpg'))
+    return rotation_img
