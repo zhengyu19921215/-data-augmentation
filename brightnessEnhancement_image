@@ -1,0 +1,6 @@
+def brightnessEnhancement(root_path,img_name):#亮度增强
+    image = Image.open(os.path.join(root_path, img_name))
+    enh_bri = ImageEnhance.Brightness(image)
+    brightness = 1.5
+    image_brightened = enh_bri.enhance(brightness)
+    return image_brightened
