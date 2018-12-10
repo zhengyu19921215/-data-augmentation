@@ -1,0 +1,11 @@
+def apply_gauss_blur(img, ks=None):
+    if ks is None:
+        ks = [7, 9, 11, 13]
+    ksize = random.choice(ks)
+ 
+    sigmas = [0, 1, 2, 3, 4, 5, 6, 7]
+    sigma = 0
+    if ksize <= 3:
+        sigma = random.choice(sigmas)
+    img = cv2.GaussianBlur(img, (ksize, ksize), sigma)
+    return img
